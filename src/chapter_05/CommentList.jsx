@@ -17,15 +17,14 @@ const comments = [
 ]
 
 
-function CommentList(props) { // Comment 라는 틀에 값 넣기
+const CommentList = () => { // Comment 라는 틀에 값 넣기
     return (
             <div>
-                {comments.map((comment) => { // 화살표 함수로 쓰기!!! map함수-배열 차례대로 꺼내서 반복함
-                    return <Comment name={comment.name} comment={comment.comment}/>
-                })}
-                {/*{comments.map( function (comment) {
-                    return <Comment name={comment.name} comment={comment.comment}/>
-                })}*/}
+                {comments.map(
+                        (comment, idx) => { // 화살표 함수로 쓰기!!! map함수-배열 차례대로 꺼내서 반복함
+                            return <Comment key={idx} name={comment.name} comment={comment.comment}/>
+                        })
+                }
             </div>
     );
 }

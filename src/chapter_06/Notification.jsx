@@ -15,7 +15,7 @@ const styles = {
     },
 };
 
-class Notification extends React.Component { // 클래스 컴포넌트
+/*class Notification extends React.Component { // 클래스 컴포넌트
     constructor(props) { // 생성자에서 state 정의함
         super(props);
 
@@ -40,6 +40,14 @@ class Notification extends React.Component { // 클래스 컴포넌트
                 </div>
         );
     }
+}*/
+
+const Notification = (props) => { // 클래스 컴포넌트
+        return (
+                <div style={styles.wrapper}>
+                    <span style={styles.messageText}>{props.message}</span>
+                </div>
+        );
 }
 
 export default Notification;

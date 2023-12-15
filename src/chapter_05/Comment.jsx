@@ -32,7 +32,7 @@ const styles = {
     },
 };
 
-const Comment: React.FC = (props) => { //function Comment(props) {return ... }
+const Comment = (props) => { //function Comment(props) {return ... }
     return (
             <div style={styles.wrapper}>
                 <div style={styles.imageContainer}>

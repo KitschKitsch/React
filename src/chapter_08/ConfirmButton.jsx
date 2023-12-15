@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const ConfirmButton = () => {
     const [isConfirmed, setIsConfirmed] = useState(false);
     const handleConfirm = () => {
-       setIsConfirmed((prevIsConfirmed) => !prevIsConfirmed);
+       setIsConfirmed((prev) => !prev); // useState의 set함수 매개변수는 항상 이전상태를 불러옴!
     };
 
     return (

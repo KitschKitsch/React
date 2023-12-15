@@ -14,7 +14,7 @@ function Accommodate(props) {
     });
 
     useEffect(() => { // 의존성배열 있으면 배열변할때마다 렌더링
-        setIsFull(count >= MAX_CAPACITY);
+        setIsFull(count >= MAX_CAPACITY); // cout가 10 이상인가?
         console.log(`Current count value : ${count}`);
     }, [count]);
 
@@ -25,7 +25,7 @@ function Accommodate(props) {
                 <button onClick={increaseCount} disabled={isFull}>입장</button>
                 <button onClick={decreaseCount}>퇴장</button>
 
-                {isFull && <p style={{color : "red"}}>정원이 가득 찼습니다.</p> }
+                {isFull && <p style={{color : "red"}}>정원이 가득 찼습니다.</p> } {/*조건부 렌더링 true이면 p 태그 */}
             </div>
     );
 }
